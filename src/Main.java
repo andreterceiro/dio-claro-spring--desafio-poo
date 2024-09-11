@@ -59,6 +59,8 @@ public class Main {
         System.out.println("Conteúdos concluídos do dev Júlio:" + devJulio.getConteudosConcluidos());
         devJulio.progredir();
         devJulio.progredir();
+        devJulio.progredir();
+        devJulio.progredir();
         System.out.println("Conteúdos inscritos do dev Júlio:" + devJulio.getConteudosInscritos());
         System.out.println("Conteúdos concluídos do dev Júlio:" + devJulio.getConteudosConcluidos());
         System.out.println("Dev Júlio - total XP: " + devJulio.calcularTotalXP());
