@@ -50,6 +50,7 @@ public class Main {
         devAndre.progredir();
         System.out.println("Conteúdos inscritos do dev André:" + devAndre.getConteudosInscritos());
         System.out.println("Conteúdos concluídos do dev André:" + devAndre.getConteudosConcluidos());
+        System.out.println("Dev André - total XP: " + devAndre.calcularTotalXP());
 
         Dev devJulio = new Dev();
         devJulio.setNome("Júlio");
@@ -57,13 +58,10 @@ public class Main {
         System.out.println("Conteúdos inscritos do dev Júlio:" + devJulio.getConteudosInscritos());
         System.out.println("Conteúdos concluídos do dev Júlio:" + devJulio.getConteudosConcluidos());
         devJulio.progredir();
+        devJulio.progredir();
         System.out.println("Conteúdos inscritos do dev Júlio:" + devJulio.getConteudosInscritos());
         System.out.println("Conteúdos concluídos do dev Júlio:" + devJulio.getConteudosConcluidos());
+        System.out.println("Dev Júlio - total XP: " + devJulio.calcularTotalXP());
 
-        Set<Dev> devHashSet = new HashSet<>();
-        devHashSet.add(devAndre);
-        devHashSet.add(devJulio);
-
-        bootcamp.setDevsInscritos(devHashSet);
     }
 }
