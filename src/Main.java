@@ -1,7 +1,4 @@
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
-
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
