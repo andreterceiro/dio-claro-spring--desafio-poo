@@ -1,6 +1,11 @@
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
 import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Conteudo;
 
 public class Main {
@@ -29,5 +34,28 @@ public class Main {
         mentoria1.setDescricao("Descrição da mentoria do curso de Java");
         mentoria1.setData(LocalDate.now());
         System.out.println(mentoria1);
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java developer");
+        bootcamp.setDescricao("descrição do bootcamp Java developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
+
+        Dev devAndre = new Dev();
+        devAndre.setNome("André");
+        devAndre.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos inscritos do dev André:" + devAndre.getConteudosInscritos());
+
+        Dev devJulio = new Dev();
+        devJulio.setNome("Júlio");
+        devJulio.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos inscritos do dev Júlio:" + devJulio.getConteudosInscritos());
+
+        Set<Dev> devHashSet = new HashSet<>();
+        devHashSet.add(devAndre);
+        devHashSet.add(devJulio);
+
+        bootcamp.setDevsInscritos(devHashSet);
     }
 }
